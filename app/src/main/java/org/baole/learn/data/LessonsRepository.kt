@@ -1,5 +1,6 @@
 package org.baole.learn.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import retrofit2.Call
@@ -19,14 +20,18 @@ class LessonsRepository {
         val data = MutableLiveData<Lessons>()
         apiService.getLessons().enqueue(object : Callback<Lessons> {
             override fun onResponse(call: Call<Lessons>, response: Response<Lessons>) {
+
                 if (response.isSuccessful) {
-                    data.value = response.body()
+                    data.postValue(response.body())
+                } else {
+
+                    Log.d("Data", "error: ${response.code()} ${response.raw()} ${response.headers()} ${response.message()}")
+                    data.postValue(null)
                 }
             }
 
             override fun onFailure(call: Call<Lessons>, t: Throwable) {
-                data.value = null
-
+                data.postValue(null)
             }
         })
         return data

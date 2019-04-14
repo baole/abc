@@ -6,9 +6,9 @@ import retrofit2.http.Path
 
 
 interface ApiRequest {
-    @GET("/lessons.json")
+    @GET("baole/abc/master/data/lessons.json")
     fun getLessons(): Call<Lessons>
 
-    @GET("/{name}.json")
+    @GET("baole/abc/master/data/{name}.json")
     fun getLesson(@Path("name") json: String): Call<LessonDetail>
 }

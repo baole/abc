@@ -2,11 +2,23 @@
   "lessons": [
     {
       "name": "b & e",
-      "json": "vi_lesson1"
+      "json": "vi_lesson_b"
     },
     {
       "name": "ê",
-      "json": "vi_lesson2"
+      "json": "vi_lesson_ee"
+    },
+    {
+      "name": "a",
+      "json": "vi_lesson_a"
+    },
+    {
+      "name": "l",
+      "json": "vi_lesson_l"
+    },
+    {
+      "name": "m",
+      "json": "vi_lesson_m"
     }
   ]
 }
