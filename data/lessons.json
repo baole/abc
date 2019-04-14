@@ -1,6 +1,12 @@
 {
   "lessons": [
-    "vi_lesson1.json",
-    "vi_lesson2.json"
+    {
+      "name": "b & e",
+      "json": "vi_lesson1"
+    },
+    {
+      "name": "ê",
+      "json": "vi_lesson2"
+    }
   ]
 }
