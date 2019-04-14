@@ -19,6 +19,22 @@
     {
       "name": "m",
       "json": "vi_lesson_m"
+    },
+    {
+      "name": "o",
+      "json": "vi_lesson_o_oo"
+    },
+    {
+      "name": "c",
+      "json": "vi_lesson_c"
+    },
+    {
+      "name": "d",
+      "json": "vi_lesson_d"
+    },
+    {
+      "name": "v",
+      "json": "vi_lesson_v"
     }
   ]
 }

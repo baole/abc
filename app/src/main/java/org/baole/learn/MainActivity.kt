@@ -5,6 +5,7 @@ import android.os.Bundle
 import org.baole.learn.databinding.ActivityMainBinding
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.Observer
 import java.util.*
 import androidx.lifecycle.ViewModelProviders
@@ -33,6 +34,25 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             currentPart++
             loadPart()
         }
+
+        binder.actionBack.setOnClickListener {
+            var changeLesson = false
+            currentPart--
+            if (currentPart < 0) {
+                currentPart = 0
+                if (currentLesson > 0) {
+                    currentLesson--
+                    changeLesson = true
+                }
+            }
+
+            if (changeLesson) {
+                loadLessonDetails(true)
+            } else {
+                loadPart()
+            }
+        }
+
 
         loadData()
     }
@@ -65,12 +85,12 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         loadLessonDetails()
     }
 
-    private fun loadLessonDetails() {
+    private fun loadLessonDetails(selectEnd: Boolean = false) {
         this.lessons.lessons.getOrNull(this.currentLesson)?.let {
             detailViewModel.loadNext(it.json)
             detailViewModel.liveData.observe(this, Observer<LessonDetail> { t ->
                 t?.let {
-                    onLessonDetailsLoaded(it)
+                    onLessonDetailsLoaded(it, selectEnd)
                 } ?: Log.e(TAG, "Error while loading lessons")
             })
         } ?: Log.e(TAG, "Error while loading lessons $currentLesson")
@@ -81,9 +101,9 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     var currentLesson = 0
     var currentItem: LessonPart?=null
     lateinit var lessons: Lessons
-    private fun onLessonDetailsLoaded(details: LessonDetail){
+    private fun onLessonDetailsLoaded(details: LessonDetail, selectEnd: Boolean = false){
         this.lessonDetails=details
-        this.currentPart = 0
+        this.currentPart = if (selectEnd) details.parts.size - 1 else 0
         details.parts.forEach {
             Log.d(TAG,"data: ${it.item}/${it.prono}")
         }
@@ -101,6 +121,11 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             currentItem = lessonDetails.parts.get(currentPart)
             binder.text.text = currentItem?.item
         }
+
+        binder.actions.visibility = View.INVISIBLE
+        binder.actions.postDelayed({
+            binder.actions.visibility = View.VISIBLE
+        }, 5000)
     }
 
 

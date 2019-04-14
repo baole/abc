@@ -1,0 +1,40 @@
+{
+  "parts": [
+    {
+      "item": "o",
+      "prono": "o"
+    },
+    {
+      "item": "cô",
+      "prono": "cờ ô cô"
+    },
+    {
+      "item": "lò",
+      "prono": "lờ o lo huyền lò"
+    },
+    {
+      "item": "mỏ",
+      "prono": "mờ o mo hỏi mỏ"
+    },
+    {
+      "item": "bỏ",
+      "prono": "bờ o bo hỏi bỏ"
+    },
+    {
+      "item": "ô ",
+      "prono": "ô"
+    },
+    {
+      "item": "cô",
+      "prono": "cờ ô cô"
+    },
+    {
+      "item": "lô",
+      "prono": "lờ ô lô"
+    },
+    {
+      "item": "cổ",
+      "prono": "cờ ô cô hỏi cổ"
+    }
+  ]
+}

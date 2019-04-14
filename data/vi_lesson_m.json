@@ -1,20 +1,28 @@
 {
   "parts": [
     {
-      "item": "m",
-      "prono": "mờ"
+      "item": "v",
+      "prono": "vờ"
     },
     {
-      "item": "ma",
-      "prono": "mờ a ma"
+      "item": "va",
+      "prono": "vờ a va"
     },
     {
-      "item": "má",
-      "prono": "mờ a ma sắc má"
+      "item": "vá",
+      "prono": "vờ a va sắc vá"
     },
     {
-      "item": "mỏ",
-      "prono": "mờ o mo hỏi mỏ"
+      "item": "vỏ",
+      "prono": "vờ o vo hỏi vỏ"
+    },
+    {
+      "item": "ve",
+      "prono": "vờ e ve"
+    },
+    {
+      "item": "về",
+      "prono": "vờ ê vê huyền về"
     }
   ]
 }
