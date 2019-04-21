@@ -1,19 +1,19 @@
 {
   "parts": [
     {
-      "itec": "c",
+      "item": "c",
       "prono": "cờ"
     },
     {
-      "itec": "ca",
+      "item": "ca",
       "prono": "cờ a ca"
     },
     {
-      "itec": "cá",
+      "item": "cá",
       "prono": "cờ a ca sắc cá"
     },
     {
-      "itec": "cỏ",
+      "item": "cỏ",
       "prono": "cờ o co hỏi cỏ"
     }
   ]

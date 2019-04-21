@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import org.baole.learn.data.LessonInfo
 import org.baole.learn.data.Lessons
 import org.baole.learn.data.LessonsViewModel
@@ -46,7 +46,8 @@ class LessonListFragment : BaseFragment() {
     }
 
     private fun onLessonsLoaded(it: Lessons) {
-        binder.recycler.layoutManager = LinearLayoutManager(context)
+        binder.recycler.layoutManager = GridLayoutManager(context, 3)
+        binder.recycler.addItemDecoration(LessonListItemDecoration(context!!))
         binder.recycler.adapter = LessonListAdapter(this, it)
     }
 
