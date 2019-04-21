@@ -1,8 +1,10 @@
-package org.baole.learn.data
+package org.baole.learn.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import org.baole.learn.data.LessonDetail
+import org.baole.learn.data.Lessons
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

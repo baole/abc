@@ -1,4 +1,4 @@
-package org.baole.learn.data
+package org.baole.learn.repository
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

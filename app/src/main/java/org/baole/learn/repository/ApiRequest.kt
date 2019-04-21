@@ -1,5 +1,7 @@
-package org.baole.learn.data
+package org.baole.learn.repository
 
+import org.baole.learn.data.LessonDetail
+import org.baole.learn.data.Lessons
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

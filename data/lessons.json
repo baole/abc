@@ -35,6 +35,14 @@
     {
       "name": "v",
       "json": "vi_lesson_v"
+    },
+    {
+      "name": "i",
+      "json": "vi_lesson_i"
+    },
+    {
+      "name": "đ",
+      "json": "vi_lesson_dd"
     }
   ]
 }

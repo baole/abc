@@ -1,0 +1,20 @@
+{
+  "parts": [
+    {
+      "item": "i",
+      "prono": "i"
+    },
+    {
+      "item": "bi",
+      "prono": "bờ i bi"
+    },
+    {
+      "item": "li",
+      "prono": "lờ i li"
+    },
+    {
+      "item": "ni",
+      "prono": "nờ i ni"
+    }
+  ]
+}
